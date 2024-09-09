@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import LoginButton from './components/loginButton';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         >
           Learn React
         </a>
+        {process.env.REACT_APP_AUTH0_DOMAIN}{process.env.REACT_APP_AUTH0_CLIENT_ID}
+        <LoginButton />
       </header>
     </div>
   );
